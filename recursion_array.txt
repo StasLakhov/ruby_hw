@@ -1,0 +1,8 @@
+rec = [1, 2, 3, 4, 5]
+def reverse(arg)
+  new_arr = []
+  return new_arr if arg.empty?
+    new_arr << arg.pop
+    new_arr + reverse(arg)
+  end
+ print reverse(Array.new(rec))
