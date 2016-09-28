@@ -1,0 +1,5 @@
+def rec(arg)
+  arg.size < 2 ? arg : arg[-1] + rec(arg[1..-2]) + arg[0]
+end
+
+print rec('my string')
