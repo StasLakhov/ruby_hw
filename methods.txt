@@ -1,0 +1,62 @@
+# numbers
+12.abs  #=> 12
+
+1.ceil        #=> 1
+1.2.ceil      #=> 2
+(-1.2).ceil   #=> -1
+(-1.0).ceil   #=> -1
+
+1 == 1.0          #=> true
+1.eql?(1.0)       #=> false
+(1.0).eql?(1.0)   #=> true
+
+1.floor      #=> 1
+(-1).floor   #=> -1
+
+# strings
+"Ho! " * 3   #=> "Ho! Ho! Ho! "
+"Ho! " * 0   #=> ""
+
+a = "hello "
+a << "world"   #=> "hello world"
+
+a = "hello there"
+a[1]                   #=> "e"
+a[2, 3]                #=> "llo"
+a[2..3]                #=> "ll"
+
+# symbols
+:fred.inspect   #=> ":fred"
+:fred.size      #=> 4
+:fred.upcase      #=> FRED
+
+# array
+arr = [1, 2, 3, 4]
+arr.push(5) #=> [1, 2, 3, 4, 5]
+arr << 6    #=> [1, 2, 3, 4, 5, 6]
+
+arr =  [1, 2, 3, 4, 5, 6]
+arr.pop #=> 6
+arr #=> [1, 2, 3, 4, 5]
+
+arr = [1, 2, 2, 3]
+arr.delete(2) #=> 2
+arr #=> [1,3]
+
+# ranges
+(1..10).end    #=> 10
+(10..20).first     #=> 10
+(10..20).max    #=> 20
+(10..20).min    #=> 10
+(10..20).size    #=> 11
+
+# hashes
+h = { "cat" => "feline", "dog" => "canine", "cow" => "bovine" }
+h.values_at("cow", "cat")  #=> ["bovine", "feline"]
+
+h = { "a" => 100, "b" => 200, "c" => 300 }
+h.values   #=> [100, 200, 300]
+
+h = { "c" => 300, "a" => 100, "d" => 400, "c" => 300  }
+h.to_s   #=> "a100c300d400"
+
