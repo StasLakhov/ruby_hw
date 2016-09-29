@@ -1,0 +1,8 @@
+def rec(arg)
+  return arg if arg.size < 2
+  return arg.slice(arg.size-1, 1) + rec(arg.slice(0, arg.size-1))
+  end
+
+
+print rec([1, 2, 3, 4])
+print rec('I am ninja')
